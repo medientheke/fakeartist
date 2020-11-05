@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json">
+  <link type="text/css" rel="stylesheet"  href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>A Fake Artist goes to New York</title>
+</head>
+<body>
+  <div class="cookie-notify" id="cookie-notify"></div>
+  <!-- MAIN MENU -->
+  <div class="main">
+
+    <div class="input-div" id="spieler-anzahl-div">
+		<label for="spieler-anzahl">Eure Spieleranzahl: </label><br>
+		<input type="number" id="spieler-anzahl" name="spieler-anzahl" min="1" value="10"><br>  
+	</div>
+	<div class="input-div" id="spieler-nr-div">
+		<label for="spieler-nr">Deine Spielernummer: </label><br>
+		<input type="number" id="spieler-nr" name="spieler-nr" min="1" value="1"><br>  
+	</div>
+	<div class="input-div" id="wort-nr-div">
+		<label for="wort-nr">Welches Wort wollt Ihr spielen? (1 - 1000) </label><br>
+		<input type="number" id="wort-nr" name="wort-nr" min="1" max="1000" value="1"><br>  
+	</div>
+	<div class="WortButton" id="WortButtonDiv">
+    	<label for="wort-button">Dein Wort lautet</label><br>
+		<button id="wort-button"> </button>
+	</div>
+
+	<div class="input-div">	</div>
+	
+	<div class="input-div" id="wort-eingabe-div">
+		<label for="wort-eingabe">Eigenes Wort spielen: </label><br>
+		<input type="text" id="wort-eingabe" name="wort-eingabe" ><br>  
+    	<button id="eingabe-button"> Link erzeugen </button>
+	</div>
+	<div class="input-div" id="wort-eingabe-div">
+		<label for="wort-link">Dein Link lautet: </label><br>
+		<label id="wort-link">  </label>
+	</div>
+	  
+  </div> <!-- ENDE MAINMENU -->
+  <script src="init.js" type="text/javascript" ></script>
+</body>
+</html>
