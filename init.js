@@ -80,7 +80,7 @@ document.getElementById("eingabe-button").addEventListener('click',function(){
 		for (let i=0; i<ownWordChars.length;i++){
 	        word = word + ownWordChars[i].charCodeAt(0) + "a";
         }
-	document.getElementById("wort-link").innerHTML = "https://medientheke.github.io/#"+word+"b"+playerIdx;		
+	document.getElementById("wort-link").innerHTML = "https://medientheke.github.io/fakeartist/#"+word+"b"+playerIdx;		
     }
     
     
