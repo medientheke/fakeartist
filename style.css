@@ -49,7 +49,7 @@ body{
 
 .main{
   /*groesse:*/
-    width: 100%;
+    width: 20%;
     /*height: 100%;*/
   /*Anordnung der Elemente im Header*/
     display: flex;
@@ -58,18 +58,6 @@ body{
     justify-content: space-around;
     align-items: center;
     align-content: center;
-}
-.main div{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    min-height: 50px;
-  /*width: 100px;
-  height: 100px;
-  overflow: hidden;*/
 }
 
 .main div div{
@@ -85,25 +73,10 @@ body{
   overflow: hidden;*/
 }
 
-img{
-  min-height: 48px;
-  min-width: 48px;
-  height: 80px;
-  max-height: 10%;
-}
-
 button{
   min-height: 48px;
   min-width: 48px;
   width: 100%;
-}
-
-/*************************************************/
-/*        die Single-Page-unsichtbar-machen      */
-/*************************************************/
-
-.invisible{
-  display: none;
 }
 
 #settings-div{
@@ -135,4 +108,11 @@ button{
     align-items: center;
     align-content: center;
 	
+}
+
+/*************  Das Malfeld  **********************/
+
+iframe{
+	width: 80%;
+	height: 100%;
 }
