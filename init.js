@@ -24,15 +24,16 @@ var words = ["Adler","Fisch","Sonnenblume","Pferdestall","Wasserhahn","Bücherwu
 /************************************************/
 
 document.getElementById("wort-button").addEventListener('click',function(){
-    let ownWord = decodeURI(window.location.hash).split('/')[0];
-    let playerCount = document.getElementById("spieler-anzahl").value;
+	//let ownWord = decodeURI(window.location.hash).split('/')[0];
+    let ownWord = document.getElementById("wort-code").value;
+	
+	let playerCount = document.getElementById("spieler-anzahl").value;
     let playerIdx = document.getElementById("spieler-nr").value;
     let word = "";
     let playerGenIdx = 0;
   
     if (ownWord == "" || ownWord == "#"){
-	    let idx = document.getElementById("wort-nr").value - 1;
-        word = words[idx];
+	    word = words[idx];
     }else{
 		//document.getElementById("wort-link").innerHTML = "#"+ownWord;
 		playerGenIdx = parseInt(ownWord.split('b')[1]);
@@ -40,6 +41,10 @@ document.getElementById("wort-button").addEventListener('click',function(){
 		for (let i=0; i<ownWordChars.length-1;i++){
 			word = word + String.fromCharCode(ownWordChars[i]);
 		}
+	}
+	if (word == ""){
+	    let idx = document.getElementById("wort-nr").value - 1;
+    	word = words[idx];
 	}
   
     //are you the fake artist?
@@ -68,11 +73,11 @@ document.getElementById("wort-button").addEventListener('click',function(){
   
 });
 
-document.getElementById("eingabe-button").addEventListener('click',function(){
+document.getElementById("code-button").addEventListener('click',function(){
     let playerIdx = document.getElementById("spieler-nr").value;
-    let ownWord = document.getElementById("wort-eingabe").value;
+    let ownWord = document.getElementById("word-input").value;
 	if (ownWord === ""){
-		document.getElementById("wort-link").innerHTML = "kein Wort eingeben";
+		document.getElementById("code-output").value = "kein Wort eingeben";
 	}else{
 		//document.getElementById("wort-link").innerHTML = "#"+ownWord;
 		let ownWordChars = ownWord.split('');
@@ -80,10 +85,9 @@ document.getElementById("eingabe-button").addEventListener('click',function(){
 		for (let i=0; i<ownWordChars.length;i++){
 	        word = word + ownWordChars[i].charCodeAt(0) + "a";
         }
-	document.getElementById("wort-link").innerHTML = "https://medientheke.github.io/fakeartist/#"+word+"b"+playerIdx;		
-    }
-    
-    
+		document.getElementById("code-output").value = "#"+word+"b"+playerIdx;		
+	}
+     
 });
 
 
