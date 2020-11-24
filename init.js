@@ -33,19 +33,20 @@ document.getElementById("wort-button").addEventListener('click',function(){
     let playerGenIdx = 0;
   
     if (ownWord == "" || ownWord == "#"){
-	    word = words[idx];
-    }else{
-		//document.getElementById("wort-link").innerHTML = "#"+ownWord;
-		playerGenIdx = parseInt(ownWord.split('b')[1]);
-		let ownWordChars = ownWord.split('#')[1].split('b')[0].split('a');
-		for (let i=0; i<ownWordChars.length-1;i++){
-			word = word + String.fromCharCode(ownWordChars[i]);
-		}
-	}
-	if (word == ""){
-	    let idx = document.getElementById("wort-nr").value - 1;
+	let idx = document.getElementById("wort-nr").value - 1;
     	word = words[idx];
-	}
+    }else{
+	//document.getElementById("wort-link").innerHTML = "#"+ownWord;
+	playerGenIdx = parseInt(ownWord.split('b')[1]);
+	let ownWordChars = ownWord.split('#')[1].split('b')[0].split('a');
+	for (let i=0; i<ownWordChars.length-1;i++){
+	    word = word + String.fromCharCode(ownWordChars[i]);
+        }
+    }
+    if (word == ""){
+        let idx = document.getElementById("wort-nr").value - 1;
+        word = words[idx];
+    }
   
     //are you the fake artist?
     let wordChars = word.split('');
